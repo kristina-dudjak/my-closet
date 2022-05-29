@@ -28,9 +28,7 @@ class ClosetFragment : Fragment() {
         _binding = FragmentClosetBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textCloset
         homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
         }
         return root
     }
